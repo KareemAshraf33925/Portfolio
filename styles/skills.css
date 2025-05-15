@@ -1,0 +1,39 @@
+/* start-skills */
+.skills{
+    margin: 0 50px
+}
+
+.skills .content{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+    flex-wrap:wrap;
+    gap: 50px;
+}
+.skills .content .InfoSkills .skill{
+    margin-top: 20px;
+}
+.skills .content .InfoSkills .skill p{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 400
+}
+.skills .download {
+    margin-top: 50px;
+}
+.skills .download  .DownloadLink{
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+/* end-skills */
+/* start-responsive */
+@media(max-width:1280px){
+    .skills .content {
+        gap: 10px;
+    }
+}
+/* end-responsive */

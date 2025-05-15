@@ -1,0 +1,106 @@
+/* start-about */
+.about .AboutContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    margin: 0 50px;
+}
+.about .AboutContent .AboutInfo{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+.about .AboutContent .img{
+    transform: translateX(1000px);
+    animation-name: MoveImg;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards;
+}
+/* animation img */
+@keyframes MoveImg{
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+/* animation h1 */
+.about .AboutContent .AboutInfo{
+    transform: translateX(-1000px);
+    animation-name: Moveh1;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes Moveh1{
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+/* start- more Details */
+.about .AboutContent .AboutInfo .MoreInformation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.about .AboutContent .AboutInfo .MoreInformation .items{
+    list-style: none;
+}
+.about .AboutContent .AboutInfo .MoreInformation .items li{
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.about .AboutContent .AboutInfo .MoreInformation .items li::before{
+    content:">";
+    color:white;
+    display:inline-block;
+   margin-right: 10px
+}
+.about .AboutContent .AboutInfo .MoreInformation .items li span{
+    display: inline-block;
+    margin-left: 5px;
+    color: rgb(76, 0, 255);
+}
+/* end-about */
+/* start-responsive */
+@media (min-width:765px) and (max-width:845px){
+    .about .AboutContent {
+        flex-direction: column-reverse;
+        gap: 10px;
+        margin: 0px 63px;
+    }
+}
+@media (min-width:320px) and (max-width:445px){
+    .about .AboutContent {
+        flex-direction: column-reverse;
+        gap: 10px;
+        margin: 0px 10px;
+    }
+    .about .AboutContent .AboutInfo {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0px;
+    }
+    .about .AboutContent .AboutInfo .MoreInformation {
+        gap: 15px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/* end-responsive */
