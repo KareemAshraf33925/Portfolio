@@ -50,31 +50,35 @@ export default function ContactUs() {
   };
   return (
     
-        <section id="contactus" className="bg-black h-dvh shadow-amber-50 flex justify-center items-center
+        <section id="contactus" className="bg-black  shadow-amber-50 flex justify-center items-center
         mx-auto max-w-screen px-4 py-10 sm:px-6 lg:px-8 ">
 
-      <div className="shadow-md  w-3/4 h-3/4">
+      <div className="shadow-md  w-3/4 h-[500px] md:h-[600px]">
         <fieldset className="border border-white p-10 rounded-2xl w-full h-full ">
           <legend className=" text-white text-2xl font-bold">ContactUs</legend>
          <div className="flex justify-center items-center w-full h-full">
-         <form onSubmit={handleSubmit} className="w-full translate-x-32">
-           <div className="flex flex-col justify-center items-start  gap-3 w-full h-full">
+         <form onSubmit={handleSubmit} className="w-full translate-x-5 lg:translate-x-32">
+           <div className="flex flex-col justify-start  md:justify-center md:items-start  gap-3 w-full h-full">
           <label htmlFor="name" className="text-white font-bold">Name</label>
           
           <input type="text"  id="name"  className="  border border-white rounded-xl
-          text-white h-15
-          w-3/4  outline-none"
+          text-white h-10 w-3/4 md:h-10
+          md:w-3/4  outline-none"
           onChange={(e)=>SetFormData({...FormData,name:e.target.value})}/>
          <label htmlFor="email" className="text-white font-bold">Email</label>
           <input type="email" id="email"  className="p-10 border border-white rounded-xl
-          text-white w-3/4 outline-none h-15"
+          text-white 
+          h-10 w-3/4
+          md:w-3/4 outline-none md:h-10"
           onChange={(e)=>SetFormData({...FormData,email:e.target.value})}/>
          <label htmlFor="message" className="text-white font-bold">Message</label>
           <textarea  id="message"  className="p-10 border border-white rounded-xl
-          text-white w-3/4 outline-none h-32"
+          text-white 
+          h-28 w-3/4
+          md:w-3/4 outline-none md:h-32"
           onChange={(e)=>SetFormData({...FormData,message:e.target.value})}
           ></textarea>
-          <div className="flex justify-center items-center gap-5">
+          <div className="flex flex-col justify-start items-start md:justify-center md:items-center md:flex-row gap-5">
          <button
           type="submit"
          
@@ -82,6 +86,7 @@ export default function ContactUs() {
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
+      
         {messageSuccess?(<p className="text-blue-600 text-2xl">The message Send</p>) :""}
         {messageFailed?(<p className="text-red-500 text-2xl">Failed Send Message</p>):""}
         </div>

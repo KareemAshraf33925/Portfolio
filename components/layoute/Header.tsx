@@ -8,13 +8,14 @@ export default function Header() {
   };
   return (
     <>
-<header className="backdrop-blur-lg bg-white/15  shadow-md h-auto fixed w-3/4   left-1 top-5   z-50 
-rounded-full p-10
-md:left-1/4 md:w-1/2
+<header className="backdrop-blur-lg bg-white/15  shadow-md h-auto fixed  left-0 right-0 top-0   z-50 
+rounded-br-full
+rounded-bl-full
+
 ">
   <div className="mx-auto
   relative
-  flex flex-col justify-center flex-wrap   h-16 max-w-screen items-center  gap-5 
+  flex  justify-center flex-wrap   h-16 max-w-screen items-center  gap-40 
   md:flex-row
   md:justify-center
   md:items-center
@@ -29,8 +30,8 @@ md:left-1/4 md:w-1/2
         onClick={toggleMenu}><i className="fa-solid fa-bars"></i></span>
       <nav  className=
       {`transition-all duration-300 ease-in-out
-        backdrop-blur-lg bg-white/15 
-       ${isOpen?" absolute  top-16 right-7":"absolute  top-16 -right-48"}
+      backdrop-blur-lg bg-white/15
+       ${isOpen?" absolute  top-16 right-14":"absolute  top-16 -right-48"}
          md:static
           md:bg-transparent
         `} >

@@ -1,11 +1,16 @@
-
+"use client"
 import About from "@/components/ui/About";
 import HomePage from"../components/ui/HomePage";
 import Skills from "@/components/ui/Skills";
 import Works from "@/components/ui/Works";
 import ContactUs from "@/components/ui/ContactUs";
 import Footer from "@/components/layoute/Footer";
+import { useState } from "react";
 export default function Home() {
+const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
     <HomePage/>
@@ -14,11 +19,23 @@ export default function Home() {
     <Works/>
     <ContactUs/>
     <Footer/>
-    <div className="fixed top-36  left-0 backdrop-blur-lg bg-white/15 flex justify-center rounded-tr-2xl
-    rounded-br-2xl shadow-md h-52 items-center gap-4
+    <div className="fixed top-36  -left-1  flex flex-col justify-center
+     shadow-md h-52 items-center gap-4
     w-12 
+    cursor-pointer
     ">
-        <div className="flex justify-center items-center flex-col gap-10 my-3 md:gap-6">
+      <span className="block text-2xl font-bold text-white
+       rounded-tr-2xl 
+      backdrop-blur-lg bg-white/15 w-full text-center
+      h-10
+      "
+      onClick={toggleMenu}>+</span>
+        <div className={`flex justify-center items-center flex-col gap-5 my-3
+        transition-all duration-300 ease-in-out h-36
+        relative
+          ${isOpen ?"-top-4 left-0":"-top-4 -left-28"}
+        backdrop-blur-lg bg-white/15 w-full rounded-br-2xl
+        md:gap-6`}>
           <a
             className="block rounded-md  bg-gray-100
              px-5 py-2.5 text-sm font-medium text-black transition hover:text-white hover:bg-black sm:block "

@@ -2,10 +2,12 @@ import React from 'react'
 
 export default function Skills() {
   return (
-   <section className='mx-auto max-w-screen bg-black py-32 h-dvh
+   <section className='mx-auto max-w-screen bg-black  
    flex justify-center items-start'>
         <div  className='  px-4 py-10 sm:px-6 lg:px-8 
-        flex justify-center items-start gap-10 flex-row flex-wrap' id="skills">
+        flex justify-center items-center gap-10 flex-row flex-wrap
+        md:items-start
+        ' id="skills">
             <h2 className='text-3xl font-bold text-white '>
                 Skills
             </h2>

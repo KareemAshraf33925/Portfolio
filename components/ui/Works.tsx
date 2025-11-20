@@ -55,8 +55,8 @@ export default function Works() {
 ]
   return (
    <>
-   <section className=' max-w-screen bg-black h-dvh
-   flex justify-center items-center  flex-col gap-5'  >
+   <section className=' max-w-screen bg-black 
+   flex justify-center items-center  flex-col gap-5' id="works"  >
     <h2 className='text-white font-bold text-2xl '>Projects</h2>
     <div className='flex flex-row justify-center items-center gap-5 flex-wrap'>
     {projects.map((project,index)=>(

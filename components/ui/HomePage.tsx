@@ -44,7 +44,7 @@ export default function HomePage() {
     }, [currentIndex, isDeleting, text]);
   return (
     <>
-    <div style={{ width: '100%', height: '100vh', position: 'relative' ,background:'black'}}>
+    <div style={{ width: '100%', height: '600px', position: 'relative' ,background:'black'}}>
 
 <GridScan
 
@@ -69,7 +69,7 @@ export default function HomePage() {
   noiseIntensity={0.01}
 
 />
-  <section className='pt-40 bg-transparent absolute top-1/4 left-50%' id='home'>
+  <section className='pt-40 bg-transparent absolute top-24 md:top-1/4 left-50%' id='home'>
       <div className="mx-auto max-w-screen px-4 py-10 sm:px-6 lg:px-8">
        
           
@@ -106,7 +106,7 @@ export default function HomePage() {
                I'm &nbsp;{displayText}|
               </p>
               <h3 className='text-xl my-3.5 font-semibold text-white sm:text-3xl'>Summary</h3>
-              <p className='mt-4 text-white font-bold text-center w-3/5'>Frontend Developer skilled in React.js, Next.js, TypeScript, Redux Toolkit, and Tailwind CSS. Experienced in
+              <p className='mt-4 text-white font-bold text-center md:w-3/5'>Frontend Developer skilled in React.js, Next.js, TypeScript, Redux Toolkit, and Tailwind CSS. Experienced in
     building responsive and high-performance applications, improving load speed by 60% and achieving 95+
     WCAG accessibility scores. Passionate about creating user-friendly experiences and collaborating in Agile
     teams to deliver scalable and impactful digital solutions</p>

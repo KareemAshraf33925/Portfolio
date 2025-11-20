@@ -4,7 +4,7 @@ export default function About() {
    
   return (
     <>
-    <section id='about'  className='bg-black text-white h-dvh  max-w-screen  px-4 py-10 sm:px-6 lg:px-8
+    <section id='about'  className='bg-black text-white   max-w-screen  px-4 py-10 sm:px-6 lg:px-8
     flex justify-center items-center'>
  
     <div className="flex justify-center items-center gap-10  flex-wrap">
