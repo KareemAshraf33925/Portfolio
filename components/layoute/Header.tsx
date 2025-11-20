@@ -1,19 +1,44 @@
+"use client"
 import React from 'react'
-
+import { useState } from 'react'
 export default function Header() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
-<header className="backdrop-blur-lg bg-white/15  shadow-md h-auto fixed  w-1/2 top-5  left-1/4 z-50
-rounded-full p-10">
-  <div className="mx-auto flex flex-col justify-center flex-wrap md:flex-row  h-16 max-w-screen-xl items-center gap-48 ">
+<header className="backdrop-blur-lg bg-white/15  shadow-md h-auto fixed w-3/4   left-1 top-5   z-50 
+rounded-full p-10
+md:left-1/4 md:w-1/2
+">
+  <div className="mx-auto
+  relative
+  flex flex-col justify-center flex-wrap   h-16 max-w-screen items-center  gap-5 
+  md:flex-row
+  md:justify-center
+  md:items-center
+  md:static
+  md:gap-48 ">
     <a className="block border border-black rounded-full" href="#">
       <img src="/assets/sidebar.jpg" alt="kareem" loading="lazy" className=' w-12 h-12 rounded-full'/>
       
     </a>
 
-    
-      <nav aria-label="Global" className="md:block">
-        <ul className="flex  items-center  gap-6 text-sm">
+    <span className='block  md:hidden text-2xl text-white cursor-pointer'
+        onClick={toggleMenu}><i className="fa-solid fa-bars"></i></span>
+      <nav  className=
+      {`transition-all duration-300 ease-in-out
+        backdrop-blur-lg bg-white/15 
+       ${isOpen?" absolute  top-16 right-7":"absolute  top-16 -right-48"}
+         md:static
+          md:bg-transparent
+        `} >
+       
+        <ul className="flex flex-col gap-5 justify-center items-center w-32 
+        md:flex-row 
+        md:justify-center  md:items-center  md:gap-6 md:w-full
+         text-sm">
           <li>
             <a
               className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75 font-bold"
@@ -60,12 +85,8 @@ rounded-full p-10">
 
         </ul>
       </nav>
-
-     
-   
   </div>
 </header>
 
     </>
-  )
-}
+  )}

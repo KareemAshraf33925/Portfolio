@@ -70,7 +70,7 @@ export default function HomePage() {
 
 />
   <section className='pt-40 bg-transparent absolute top-1/4 left-50%' id='home'>
-      <div className="mx-auto max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen px-4 py-10 sm:px-6 lg:px-8">
        
           
             <div className="max-w-prose md:max-w-none flex flex-col justify-center  items-center gap-5  ">
